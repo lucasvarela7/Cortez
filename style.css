@@ -1,0 +1,247 @@
+/* Reset simples */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #6d6d6d, #1e1e1e); 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+    min-height: 100vh;        
+    flex-direction: column;
+    padding-top: 100px; /* Espaço para o header fixo */
+}
+
+/* Cabeçalho fixo */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #6d6d6d;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    color: white;
+    border-radius: 0;
+}
+
+/* Navegação */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #8e9b9f;
+}
+
+/* Título principal */
+h1 {
+    display: flex;
+    justify-content: center;
+    color: #FBAC11;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Subtítulo */
+h2 {
+    color: #FBAC11;
+    font-size: 40px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Linha divisória */
+hr {
+    border: 0;
+    border-top: 2px solid #8e9b9f;
+    margin: 40px 0;
+    width: 100%;
+}
+
+/* Container da imagem central */
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 9%;
+    border: 5px solid rgb(169, 113, 16);
+    padding: 30px;
+}
+
+p {
+    text-align: center;
+    font-size: 1.2em;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 15px;
+    color: #e8f1f4;
+    width: 100%;
+}
+
+section {
+    padding: 40px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.card {
+    flex: 1 1 300px;
+    max-width: 400px;
+    margin: 40px auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #ccc;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border: none;
+    padding: 0;
+}
+
+.card-content {
+    padding: 30px;
+}
+
+.card-content h2 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+    color: #6d6d6d;
+}
+
+.card-content p {
+    font-size: 1em;
+    color: #333;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #333;
+}
+
+/* Rodapé */
+footer {
+    width: 100%;
+    background-color:  #333;
+    color: #ccc;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 1.3em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .img-container img {
+        width: 100%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    hr {
+        margin: 30px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.2em;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    h1 {
+        font-size: 1.3em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    .img-container img {
+        width: 100%;
+        padding: 10px;
+    }
+
+    hr {
+        margin: 20px 0;
+    }
+}
